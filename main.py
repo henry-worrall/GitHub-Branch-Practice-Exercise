@@ -3,8 +3,7 @@ Welcome to this GitHub practice exercise. I hope by the end of this you feel com
 """
 
 # If you work for Grayce, add your name to this list
-graycians = ['  Alice West  ', '  Roisin Wherry   ', '  peter busby  ', '  geoff smith   ', 'henry worrall']
-
+graycians = ['ELIZA IS COOL', '  Alice West  ', '  Roisin Wherry   ', '  peter busby  ', '  geoff smith   ', 'henry worrall']
 
 
 
