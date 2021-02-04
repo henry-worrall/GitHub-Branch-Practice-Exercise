@@ -3,7 +3,7 @@ Welcome to this GitHub practice exercise. I hope by the end of this you feel com
 """
 
 # If you work for Grayce, add your name to this list
-graycians = ['  peter busby  ', '  geoff smith   ']
+graycians = ['  Alice West  ', '  Roisin Wherry   ']
 
 
 # This function cleans a list of names and prints them
