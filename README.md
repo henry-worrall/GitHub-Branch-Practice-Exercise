@@ -1,16 +1,16 @@
 # GitHub Branching Practice Exercise
 
-Welcome to this practice exercise to get you familiar with how an organisation might use GitHub for collaboration!
+Welcome to this practice exercise where you will familiarise yourself with how an organisation might use GitHub for collaboration!
 
-## Aim
+## Aims
 
-To provide everyone partaking the exercise to gain an understanding as to what Git and GitHub are and why they might be useful in an organisation. To give an interactive example of how you can use GitHub for file management and version control.
+To provide an understanding as to what Git and GitHub are, and why they might be useful in a collaborative environment. To give an example of how you can use GitHub for file management and version control.
 
 ## Prerequisites 
 
 Users must have installed Git and GitHub - [Set up Git](https://docs.github.com/en/github/getting-started-with-github/set-up-git)
 
-Please ensure that you have followed all of the 3 steps in this guide. If you don't configure your email and username, then you can't push your changes from the command line.
+Please ensure that you have followed all of the 3 steps in this guide. If you don't configure your email and username, then you can't push your changes from the command line!
 
 ## Git and GitHub
 
@@ -22,15 +22,20 @@ Git and GitHub go hand-in-hand together, however, they are not the same thing.
 
 ## Motivation
 
-GitHub provides an easy way to share code and collaborate with others. Companies use Git and GitHub to track and store changes made to files. This is particularly useful for developers, who use Git to trace errors associated with a new feature, or rollback a software product to a previous version.
+GitHub provides an easy way to share code and collaborate with others. Companies use Git and GitHub to track and store changes made to files. This is particularly useful for developers, who use Git to trace errors associated with a new feature, or rollback software to a previous version.
 
-Git maintains a record of the changes during the construction and lifetime of a product, whilst not replicating entire files. In this way, file storage is reduced and there is no need to call files '`file.txt`', '`file-edit.txt`', '`file-edit-2.txt`'.
+Git maintains a record of the changes during the construction and lifetime of a product, whilst not replicating entire files. In this way, file storage is reduced and there is no need to call files '`file.txt`', '`file-edit.txt`', '`file-edit-2.txt`', etc.
 
-Another key motivation for using Git is that allows for multiple people to work on the same files simultaneously without disrupting the main product. This principle is known as *branching* and is what this exercise will cover.
+Another reason for using Git is that it allows people to work on the same files simultaneously without disrupting the main product. This principle is known as *branching* and is what this exercise will cover.
 
-**Branching** lets users create a separate 'branch' of work where they can make changes or introduce new features to the product independently of the main version, known as the master branch. Once a feature has been tested, it can be merged back with the latest version of the master branch.
+**Branching** lets users create a separate 'branch' of work where they can make changes or introduce new features to the product independently of the main version (the master branch). Once a feature has been tested, it can be merged back with the latest version of the master branch.
 
-Finally, hosting your code on GitHub is also a great way of showcasing what you're capable of. Whether it's to prospective clients or future employers, showing that you can code is far more persuasive than telling them you can. It also shows that you can use version control, which is desired skills by many employers.
+<figure>
+    <img src="https://guides.github.com/activities/hello-world/branching.png" alt="" width="100%"  style="display: block;"/>
+    <figcaption align="center"><i>Example of how you would integrate a new feature into the going master solution using a GitHub branch.</i></figcaption>
+</figure>
+
+Finally, hosting your code on GitHub is also a great way of showcasing what you're capable of. Whether it's to prospective clients or future employers, showing them that you can code is far more persuasive than telling them. It also shows that you can use version control, which is a desired skill by many employers.
 
 ## Instructions
 
@@ -38,17 +43,19 @@ Finally, hosting your code on GitHub is also a great way of showcasing what you'
 
 To download this repository to your local computer, click the 'code' button at the top of the page and copy the HTTPS address given.
 
-<img src="screenshots/clone-repo.jpg?raw=true" alt="" width="40%"  style="display: block;"/>
+<figure align="center">
+<img src="screenshots/clone-repo.jpg?raw=true" alt="" width="40%"  style="display: center;"/>
+</figure>
 
-Open a terminal (command line) and change to the directory you'd like to work in. Run the *clone* command with the appropriate address. 
+Open a terminal (command prompt, or Git Bash if you have it) and change to the directory you'd like to work in using the *cd* command (see Command Line Commands [here]( https://www.codecademy.com/articles/command-line-commands)). Run the *clone* command with the appropriate address. 
     
     git clone https://github.com/henry-worrall/GitHub-Branch-Practice-Exercise.git
 
-You should now be able to see all the files of the repository in your file explorer.
+You should now be able to see all of the repository files in your local file explorer.
 
 ### 2. Create a Branch
 
-**This is really important!** Before you start editing files in a collaborative environment, you must change to an independent branch. This avoids situations where you accidentally introduce a bug which breaks the functionality of the entire project. If a bug is introduced on your branch, it won't affect anyone else's work.
+**This is really important!** Before you start editing files in a collaborative environment, you must change to an independent branch. This avoids situations where you accidentally introduce a bug which breaks the functionality of the entire team’s project. If a bug is introduced on your branch, it won't affect anyone else's work.
 
 Create a branch with a descriptive title, e.g. *henry-feature-name*. This is done using the *branch* command.
 
@@ -68,7 +75,7 @@ Currently, your new branch is an exact copy of the master branch. However, any c
 
 On your new branch, make edits to the files. You can create a new file or edit an existing file, or delete a file (with caution!).
 
-For this exercise, try:
+For this exercise, try to:
 - create a new file
 - edit the `main.py` file. 
 
@@ -78,14 +85,14 @@ Edit the list in the `main.py` file to include your name. If you run the script,
 
 ### 4. Commit
 
-As with all significant changes you make whilst using Git, you need to commit your changes to your branch. This is a two-part process.  
+As with all significant changes you make whilst using Git, you need to commit your changes to your branch. If you don’t commit a change, then the edits will not be logged in Git. Committing is a two-part process.  
 
 1. Stage (i.e. select) the files you wish to commit
 2. Commit the changes
 
 To stage the files you have to use the *add* command:
 
-    # adds all files which have been changed
+    # adds all files with changes
     git add .
 
     # adds just the main.py file 
@@ -93,13 +100,13 @@ To stage the files you have to use the *add* command:
 
 You can check which files have and haven't been staged using the *status* command.
 
-Once you have selected the appropriate files, commit the changes using the *commit* command. Always provide a short descriptive message relating the changes you have made.
+Once you have selected the appropriate files, commit the changes using the *commit* command. It’s best practice to provide a short descriptive message relating the changes you have made.
 
     git commit -m "Added myself to list"
 
 ### 5. Merge and Integrate Changes
 
-There are many different processes that you could follow it integrate your changes with the master branch. However, I shall describe to you what I consider to be the best practice when it comes to working in a collaborative environment. I shall outline the steps below, before walking through them.
+There are many different processes that you could follow to integrate your changes with the master branch. However, I shall describe to you what I consider to be the best practice when it comes to working in a collaborative environment. I shall outline the steps below, before walking through them.
 
 1. Pull the most recent version of the master to your local computer
 2. Merge the master into your branch - best practice!
@@ -111,16 +118,16 @@ Firstly, to pull the most recent version of the master branch you must ensure yo
     git checkout master
     git pull
 
-If team members have made changes to the master branch whilst you have been building your new feature, this will update the local version of the master to what everyone else has, mirroring what is on GitHub.
+If team members have made changes to the master branch whilst you have been building your new feature, this will update your local version of the master, mirroring the latest version on GitHub.
 
-Next, you need to merge the most up-to-date version of the master branch into your new feature. To do this, ensure that you are on your branch and execute the *merge* command. You will need to select the branch you wish to merge in.
+Next, you need to merge the most up-to-date version of the master branch into your new feature. To do this, ensure that you are on your branch and execute the *merge* command. You will need to select the branch you wish to merge in (i.e. master).
 
     git checkout henry-bug-fix
     git merge master
 
 *Note that merging the master into your branch is the best practice since this will only alter your branch and not the master. Therefore, if the merge introduces a bug, it will only affect your branch and not the master.*
 
-Your command line will either tell you that the merge has been automatically completed successfully, or that there have been some conflicts. If the merge tells you that you have a conflict, you will need to amend the conflicting file(s). You can amend them by opening them up in your code editor.
+Your command line will either tell you that the merge has been automatically completed successfully, or that there have been some conflicts. If the merge tells you that you have a conflict, you will need to amend the conflicting file(s). You can amend them by opening them up in your code/text editor.
 
 A conflict will appear in the conflicting file like this:
 
@@ -141,6 +148,8 @@ You can now push your merged branch to GitHub using the *push* command.
 
     git push
 
+*Note that the first time you push changes to GitHub, you may be asked to authenticate yourself.*
+
 Your feature is now ready to be peer-reviewed and fully integrated with the team's master branch, using a pull request
 
 ### 6. Set up a Pull Request
@@ -151,11 +160,15 @@ A pull request allows for peer review of your code and new feature. It allows ot
 
 If you navigate back to the GitHub repository in your browser, you will be able to find your branch with your new features coded in. Click the "Compare & pull request" button to initiate a pull request. If you cannot see this button, you can set up a pull request in the "Pull requests" tab.
 
+<figure>
 <img src="screenshots/initiate-pull-request.png?raw=true" alt="" width="100%"  style="display: block;"/>
+</figure>
 
 You can then submit your pull request and leave any comments that you feel appropriate.
 
+<figure>
 <img src="screenshots/submit-pull-request.jpg?raw=true" alt="" width="100%"  style="display: block;"/>
+</figure>
 
 Your pull request will then appear on the "pull requests" tab. Other members of your team can now check out your code, suggest improvements or fixes. If needed, you can make any necessary changes and push them to GitHub (you will not need to create a new pull request). Once everyone is happy with your new branch's feature, someone will authorise the pull request, and your work will be fully integrated with the team's master branch.
 
