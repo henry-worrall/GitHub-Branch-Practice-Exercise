@@ -8,9 +8,15 @@ To provide an understanding as to what Git and GitHub are, and why they might be
 
 ## Prerequisites 
 
-Users must have installed Git and GitHub - [Set up Git](https://docs.github.com/en/github/getting-started-with-github/set-up-git)
+Users must have:
 
-Please ensure that you have followed all of the 3 steps in this guide. If you don't configure your email and username, then you can't push your changes from the command line!
+1.	A GitHub account - [Join GitHub](https://github.com/join) 
+2.	Installed Git on your computer and configured your Git username and commit email address – [Set up Git](https://docs.github.com/en/github/getting-started-with-github/set-up-git) (follow steps 1-3).
+3.	Ensured you can access your command line/terminal, and can access a text/code editor (e.g. notepad/sublime) on your computer.
+
+If you don't configure your email and username in steps 2 and 3 of the Git Setup guide, then you can't push your changes from the command line!
+
+MacOS users can follow this [YouTube video](https://www.youtube.com/watch?v=ZM3I16Z-lxI) if they are having issues with installing Git.
 
 ## Git and GitHub
 
@@ -32,8 +38,9 @@ Another reason for using Git is that it allows people to work on the same files 
 
 <figure>
     <img src="https://guides.github.com/activities/hello-world/branching.png" alt="" width="100%"  style="display: block;"/>
-    <figcaption align="center"><i>Example of how you would integrate a new feature into the going master solution using a GitHub branch.</i></figcaption>
 </figure>
+
+*Example of how you would integrate a new feature into the going master solution using a GitHub branch.*
 
 Finally, hosting your code on GitHub is also a great way of showcasing what you're capable of. Whether it's to prospective clients or future employers, showing them that you can code is far more persuasive than telling them. It also shows that you can use version control, which is a desired skill by many employers.
 
@@ -118,6 +125,8 @@ Firstly, to pull the most recent version of the master branch you must ensure yo
     git checkout master
     git pull
 
+*Note that the first time you pull from a GitHub repository, you might need to specify the remote origin master branch. In this case, it will tell you the command*
+
 If team members have made changes to the master branch whilst you have been building your new feature, this will update your local version of the master, mirroring the latest version on GitHub.
 
 Next, you need to merge the most up-to-date version of the master branch into your new feature. To do this, ensure that you are on your branch and execute the *merge* command. You will need to select the branch you wish to merge in (i.e. master).
@@ -143,6 +152,8 @@ Once you have resolved the conflicts appropriately, stage and commit the merged 
 
     git add .
     git commit
+
+*Note that if you do not supply any arguments after the commit command, Git will open up a temporary file which must then close. If file opens the in the terminal, you can close it by pressing* <kbd>Esc</kbd> &rightarrow; <kbd>:wq</kbd> &rightarrow; <kbd>enter</kbd>*. This can be avoided by using the message arguments.*
 
 You can now push your merged branch to GitHub using the *push* command.
 
